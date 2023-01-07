@@ -80,6 +80,7 @@ return function (App $app) {
 
             array_push($array, $object);
         }
+        $array = json_encode($array);
 
         $response->getBody()->write(print_r($array, true));
         return $response;
